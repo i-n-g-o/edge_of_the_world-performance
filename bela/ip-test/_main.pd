@@ -1,0 +1,8 @@
+#N canvas 444 304 450 300 12;
+#X obj 51 75 ipinfo;
+#X obj 48 172 print;
+#X obj 51 97 list trim;
+#X obj 48 36 loadbang;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;

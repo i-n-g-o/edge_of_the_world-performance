@@ -1,0 +1,16 @@
+#N canvas 672 296 532 401 10;
+#X msg 16 37 bang;
+#X obj 16 62 ipinfo;
+#X text 13 10 output ip addresses;
+#X obj 25 217 print;
+#X obj 127 132 unpack s s;
+#X msg 91 46 en0;
+#X obj 224 170 print ip;
+#X obj 125 170 print interface;
+#X obj 16 84 list trim;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 4 0 7 0;
+#X connect 4 1 6 0;
+#X connect 5 0 1 0;
+#X connect 8 0 3 0;
