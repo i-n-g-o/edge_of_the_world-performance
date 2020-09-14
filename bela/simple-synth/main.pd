@@ -1,4 +1,4 @@
-#N canvas 678 371 1125 798 10;
+#N canvas 686 343 1125 798 10;
 #X obj 266 449 throw~ outL;
 #X obj 376 447 throw~ outR;
 #X obj 77 51 r notes;
