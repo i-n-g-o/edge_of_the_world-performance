@@ -1,4 +1,4 @@
-#N canvas 162 231 938 636 12;
+#N canvas 246 253 938 636 12;
 #X obj 532 22 loadbang;
 #X obj 532 86 send toGUI;
 #X obj 45 28 receive fromGUI;
