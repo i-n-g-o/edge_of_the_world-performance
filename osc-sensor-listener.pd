@@ -1,101 +1,118 @@
-#N canvas 424 175 1036 539 12;
-#X obj 115 127 netreceive -u -b;
-#X msg 136 98 listen 0;
+#N canvas 774 112 1036 539 12;
+#X msg 69 96 listen 0;
 #X obj 115 158 oscparse;
 #X obj 136 36 loadbang;
 #X obj 115 189 list trim;
-#X msg 136 67 listen 51555;
 #X obj 115 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 996 1;
+-1 -1 5060 1;
 #X obj 146 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2560 1;
+-1 -1 9936 1;
 #X obj 178 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1821 1;
+-1 -1 7259 1;
 #X obj 210 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9047 1;
+-1 -1 2197 1;
 #X obj 115 282 unpack 0 0 0 0 0 0 0 0, f 32;
 #X obj 241 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9342 1;
+-1 -1 2261 1;
 #X obj 272 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2012 1;
+-1 -1 6337 1;
 #X obj 304 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8352 1;
+-1 -1 2372 1;
 #X obj 336 311 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 9271 1;
+-1 -1 3790 1;
 #X obj 115 251 route sensor ctrl;
 #X text 66 283 SENSOR;
 #X obj 409 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1410 1;
+-1 -1 11885 1;
 #X obj 440 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2845 1;
+-1 -1 7325 1;
 #X obj 472 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1562 1;
+-1 -1 3152 1;
 #X obj 504 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8014 1;
+-1 -1 9848 1;
 #X obj 409 287 unpack 0 0 0 0 0 0 0 0, f 32;
 #X obj 535 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4394 1;
+-1 -1 11290 1;
 #X obj 566 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7671 1;
+-1 -1 8049 1;
 #X obj 598 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6198 1;
+-1 -1 7887 1;
 #X obj 630 316 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 343 1;
+-1 -1 7724 1;
 #X obj 409 256 route sensor ctrl;
 #X text 360 288 SENSOR;
-#X obj 116 223 route 192.168.0.75 192.168.0.46 192.168.0.45;
 #X obj 711 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2964 1;
+-1 -1 7635 1;
 #X obj 742 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6662 1;
+-1 -1 8227 1;
 #X obj 774 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1920 1;
+-1 -1 3312 1;
 #X obj 806 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7198 1;
+-1 -1 7010 1;
 #X obj 711 284 unpack 0 0 0 0 0 0 0 0, f 32;
 #X obj 837 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7757 1;
+-1 -1 11582 1;
 #X obj 868 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4679 1;
+-1 -1 4206 1;
 #X obj 900 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7671 1;
+-1 -1 9233 1;
 #X obj 932 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8057 1;
+-1 -1 2456 1;
 #X obj 711 253 route sensor ctrl;
 #X text 662 285 SENSOR;
-#X connect 0 0 2 0;
-#X connect 1 0 0 0;
-#X connect 2 0 4 0;
-#X connect 3 0 5 0;
-#X connect 4 0 28 0;
-#X connect 5 0 0 0;
-#X connect 10 0 6 0;
-#X connect 10 1 7 0;
-#X connect 10 2 8 0;
-#X connect 10 3 9 0;
-#X connect 10 4 11 0;
-#X connect 10 5 12 0;
-#X connect 10 6 13 0;
-#X connect 10 7 14 0;
-#X connect 15 0 10 0;
-#X connect 21 0 17 0;
-#X connect 21 1 18 0;
-#X connect 21 2 19 0;
-#X connect 21 3 20 0;
-#X connect 21 4 22 0;
-#X connect 21 5 23 0;
-#X connect 21 6 24 0;
-#X connect 21 7 25 0;
-#X connect 26 0 21 0;
-#X connect 28 0 15 0;
-#X connect 28 1 26 0;
-#X connect 28 2 38 0;
-#X connect 33 0 29 0;
-#X connect 33 1 30 0;
-#X connect 33 2 31 0;
-#X connect 33 3 32 0;
-#X connect 33 4 34 0;
-#X connect 33 5 35 0;
-#X connect 33 6 36 0;
-#X connect 33 7 37 0;
-#X connect 38 0 33 0;
+#X obj 46 437 t b b;
+#X floatatom 50 501 5 0 0 0 - - -;
+#X obj 125 510 print;
+#X obj 59 382 change;
+#X obj 50 477 realtime;
+#X obj 116 127 netreceive -u -b -f;
+#X msg 146 93 listen 51555 239.200.200.200;
+#X obj 115 218 route p1 p2 p3 p4 p5 p6, f 92;
+#X msg 463 57 edge1 p2;
+#X msg 463 83 ingo p1;
+#X msg 462 114 mika p3;
+#X text 562 21 werkstatt;
+#X text 545 56 192.168.0.75;
+#X text 542 82 192.168.0.181;
+#X text 539 113 192.168.0.46;
+#X connect 0 0 42 0;
+#X connect 1 0 3 0;
+#X connect 2 0 43 0;
+#X connect 3 0 44 0;
+#X connect 8 0 4 0;
+#X connect 8 1 5 0;
+#X connect 8 2 6 0;
+#X connect 8 3 7 0;
+#X connect 8 4 9 0;
+#X connect 8 5 10 0;
+#X connect 8 6 11 0;
+#X connect 8 7 12 0;
+#X connect 13 0 8 0;
+#X connect 19 0 15 0;
+#X connect 19 1 16 0;
+#X connect 19 2 17 0;
+#X connect 19 3 18 0;
+#X connect 19 4 20 0;
+#X connect 19 5 21 0;
+#X connect 19 6 22 0;
+#X connect 19 7 23 0;
+#X connect 24 0 19 0;
+#X connect 30 0 26 0;
+#X connect 30 1 27 0;
+#X connect 30 2 28 0;
+#X connect 30 3 29 0;
+#X connect 30 4 31 0;
+#X connect 30 5 32 0;
+#X connect 30 6 33 0;
+#X connect 30 7 34 0;
+#X connect 35 0 30 0;
+#X connect 37 0 41 0;
+#X connect 37 1 41 1;
+#X connect 40 0 37 0;
+#X connect 41 0 38 0;
+#X connect 41 0 39 0;
+#X connect 42 0 1 0;
+#X connect 43 0 42 0;
+#X connect 44 0 13 0;
+#X connect 44 1 24 0;
+#X connect 44 2 35 0;
