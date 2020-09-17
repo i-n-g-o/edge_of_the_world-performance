@@ -6,7 +6,7 @@
 lib.name = rcp_pd
 
 # input source file (class name == source file basename)
-class.sources = ipinfo.c
+class.sources = ipinfo.c ether.c
 
 # all extra files to be included in binary distribution of the library
 datafiles = helloworld-help.pd helloworld-meta.pd README.md

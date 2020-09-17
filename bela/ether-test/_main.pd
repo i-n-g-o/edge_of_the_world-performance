@@ -1,0 +1,8 @@
+#N canvas 365 321 450 300 12;
+#X obj 94 103 ether;
+#X obj 94 132 print;
+#X obj 94 45 loadbang;
+#X msg 94 74 wlan0;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;

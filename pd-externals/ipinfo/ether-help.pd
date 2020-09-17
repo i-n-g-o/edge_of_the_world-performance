@@ -1,0 +1,6 @@
+#N canvas 365 321 450 300 12;
+#X obj 214 130 ether;
+#X msg 209 75 en0;
+#X obj 214 154 print;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
