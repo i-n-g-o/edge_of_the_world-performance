@@ -1,15 +1,15 @@
-#N canvas 190 58 1232 758 12;
-#X obj 27 77 oscparse;
+#N canvas 529 376 1232 758 12;
+#X obj 27 78 oscparse;
 #X obj 27 20 inlet;
 #X obj 70 467 int;
 #X obj 121 465 int;
 #X obj 172 603 s mlp;
-#X obj 110 199 route volume;
+#X obj 63 203 route volume;
 #X obj 274 467 t b;
 #X msg 274 490 train;
-#X obj 74 161 route ml audio sensor ctrl, f 63;
-#X obj 110 227 f;
-#X obj 110 255 s volume;
+#X obj 27 165 route ml audio sensor ctrl, f 63;
+#X obj 63 231 f;
+#X obj 63 259 s volume;
 #X obj 436 480 f;
 #X obj 486 480 f;
 #X obj 536 480 f;
@@ -35,19 +35,19 @@
 #X obj 970 527 i;
 #X obj 436 446 route ctrl1 ctrl2 ctrl3 ctrl4 ctrl5 ctrl6 ctrl7 ctrl8
 ;
-#X obj 266 237 i;
-#X obj 266 305 s sensor_on;
+#X obj 219 241 i;
+#X obj 219 309 s sensor_on;
 #X obj 941 447 route log send;
 #X obj 1017 515 s ctrl_send;
 #X obj 1017 487 i;
-#X obj 307 265 s sensor_send;
-#X obj 306 242 i;
-#X obj 28 49 netreceive -u -b \$1 \$2;
-#X obj 531 254 route osc_log;
-#X obj 531 280 i;
-#X obj 572 322 print osccontroller;
-#X obj 479 302 spigot 1;
-#X obj 562 283 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 260 269 s sensor_send;
+#X obj 259 246 i;
+#X obj 27 49 netreceive -u -b \$1 \$2;
+#X obj 484 258 route osc_log;
+#X obj 484 284 i;
+#X obj 525 326 print osccontroller;
+#X obj 432 306 spigot 1;
+#X obj 515 287 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 172 466 write;
 #X msg 223 467 read;
@@ -64,10 +64,12 @@
 #X obj 714 570 s t_ctrl6;
 #X obj 774 538 s t_ctrl7;
 #X obj 838 566 s t_ctrl8;
-#X obj 530 160 route system mode;
-#X obj 588 187 i;
-#X obj 587 211 s mapping_mode;
-#X obj 266 208 route on send;
+#X obj 483 164 route system mode;
+#X obj 541 191 i;
+#X obj 540 215 s mapping_mode;
+#X obj 219 212 route on send;
+#X obj 27 136 route p0;
+#X obj 144 108 r my_id;
 #X connect 0 0 31 0;
 #X connect 1 0 42 0;
 #X connect 2 0 51 0;
@@ -99,7 +101,7 @@
 #X connect 23 0 62 0;
 #X connect 28 0 29 0;
 #X connect 29 0 53 0;
-#X connect 31 0 8 0;
+#X connect 31 0 67 0;
 #X connect 31 0 46 0;
 #X connect 33 0 32 0;
 #X connect 34 0 11 0;
@@ -135,3 +137,5 @@
 #X connect 64 0 65 0;
 #X connect 66 0 35 0;
 #X connect 66 1 41 0;
+#X connect 67 0 8 0;
+#X connect 68 0 67 1;
