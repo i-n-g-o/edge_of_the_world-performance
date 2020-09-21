@@ -1,0 +1,8 @@
+#N canvas 747 621 450 300 12;
+#X obj 120 165 print;
+#X obj 119 126 netreceive -u -b;
+#X msg 148 80 listen 50555 239.100.100.100;
+#X obj 117 43 loadbang;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
