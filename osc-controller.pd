@@ -1,4 +1,4 @@
-#N canvas 402 71 1421 735 12;
+#N canvas 69 23 1436 855 12;
 #X obj 68 628 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 489 513 loadbang;
@@ -9,9 +9,9 @@
 #X obj 641 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 369 136 nbx 5 14 0 1 0 0 empty empty empty 0 -8 0 10 -262144
--1 -1 0 256;
+-1 -1 1 256;
 #X obj 37 159 tgl 15 0 empty empty sensor_on 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 670 119 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 702 119 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -23,9 +23,9 @@
 #X obj 1055 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1086 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2 1;
-#X obj 1118 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
+#X obj 1118 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2 1;
 #X obj 1150 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 373 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -37,30 +37,30 @@
 #X obj 1181 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 2 1;
 #X obj 1212 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 1 1;
+-1 -1 2 1;
 #X obj 1244 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1276 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3 1;
+-1 -1 0 1;
 #X obj 40 228 tgl 15 0 empty empty sensor_send 17 7 0 10 -262144 -1
 -1 1 1;
 #X obj 1055 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1086 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3 1;
 #X obj 1118 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1150 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1055 513 unpack 0 0 0 0 0 0 0 0, f 32;
 #X obj 1181 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 2 1;
 #X obj 1212 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 1244 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1276 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 4 1;
 #X text 1021 514 CTRL;
 #X text 1006 305 SENSOR;
 #X obj 1341 344 s sensors;
@@ -80,9 +80,9 @@
 -1 -1 0 1;
 #X msg 226 548 connect 239.100.100.100 50555;
 #X obj 816 37 hradio 15 1 0 8 empty empty mode 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj 778 538 hradio 15 1 0 8 empty empty id 0 -8 0 10 -262144 -1
--1 2;
+-1 0;
 #X obj 778 558 sel 0 1 2 3 4 5;
 #X msg 733 590 p1;
 #X obj 798 636 s p_id;
@@ -134,6 +134,13 @@
 #X obj 207 67 oscfmt ml sensor;
 #X obj 482 378 tgl 15 0 empty empty ctrl_send 17 7 0 10 -262144 -1
 -1 0 1;
+#X msg 412 748 edge1 p2;
+#X msg 412 774 ingo p1;
+#X msg 411 805 mika p3;
+#X text 511 712 werkstatt;
+#X text 494 747 192.168.0.75;
+#X text 491 773 192.168.0.181;
+#X text 488 804 192.168.0.46;
 #X connect 1 0 88 0;
 #X connect 2 0 75 0;
 #X connect 3 0 95 0;
