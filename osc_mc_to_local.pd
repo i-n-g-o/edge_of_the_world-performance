@@ -1,0 +1,16 @@
+#N canvas 569 185 579 205 12;
+#X obj 30 62 mc_listener 51555 239.200.200.200;
+#X obj 258 118 netsend -u -b;
+#X obj 258 90 spigot;
+#X obj 297 19 tgl 15 0 empty empty resend_to_localhost 17 7 0 10 -262144
+-1 -1 0 1;
+#X msg 320 90 connect localhost 51000;
+#X obj 258 146 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 320 55 loadbang;
+#X connect 0 1 2 0;
+#X connect 1 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 4 0 1 0;
+#X connect 6 0 4 0;

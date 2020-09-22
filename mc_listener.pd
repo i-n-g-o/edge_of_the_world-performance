@@ -1,11 +1,11 @@
-#N canvas 339 350 450 300 12;
+#N canvas 339 350 632 419 12;
 #X msg 69 96 listen 0;
-#X obj 115 158 oscparse;
+#X obj 116 187 oscparse;
 #X obj 145 41 loadbang;
-#X obj 115 189 list trim;
+#X obj 116 217 list trim;
 #X obj 116 127 netreceive -u -b -f;
 #X msg 146 93 listen \$1 \$2;
-#X obj 121 231 outlet;
+#X obj 116 300 outlet;
 #X obj 273 65 i \$1;
 #X obj 340 86 symbol \$2;
 #X obj 288 176 pack f s;
@@ -13,11 +13,13 @@
 #X obj 277 208 list prepend listen;
 #X obj 274 243 list trim;
 #X obj 368 243 print;
+#X obj 218 300 outlet;
+#X obj 116 157 t a a;
 #X connect 0 0 4 0;
 #X connect 1 0 3 0;
 #X connect 2 0 10 0;
 #X connect 3 0 6 0;
-#X connect 4 0 1 0;
+#X connect 4 0 15 0;
 #X connect 5 0 4 0;
 #X connect 7 0 9 0;
 #X connect 8 0 9 1;
@@ -27,3 +29,5 @@
 #X connect 11 0 12 0;
 #X connect 12 0 4 0;
 #X connect 12 0 13 0;
+#X connect 15 0 1 0;
+#X connect 15 1 14 0;
