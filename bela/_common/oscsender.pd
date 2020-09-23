@@ -1,7 +1,7 @@
-#N canvas 368 372 1439 691 12;
+#N canvas 283 294 1439 691 12;
 #X obj 78 231 spigot;
 #X msg 147 142 1;
-#X obj 78 62 r sensors;
+#X obj 98 61 r sensors;
 #X obj 1067 204 spigot;
 #X obj 1106 179 r log_control_values;
 #X obj 1067 230 print ctrl;
@@ -50,9 +50,13 @@
 #X obj 656 361 t b;
 #X obj 613 201 t b a;
 #X obj 1027 147 r ctrl_data;
+#X obj 64 161 list;
+#X obj 62 29 metro 40;
+#X obj 223 36 loadbang;
+#X obj 147 12 r sensor_speed;
 #X connect 0 0 21 0;
 #X connect 1 0 11 0;
-#X connect 2 0 0 0;
+#X connect 2 0 50 1;
 #X connect 3 0 5 0;
 #X connect 4 0 3 1;
 #X connect 6 0 9 0;
@@ -103,3 +107,7 @@
 #X connect 48 1 46 1;
 #X connect 49 0 3 0;
 #X connect 49 0 6 0;
+#X connect 50 0 0 0;
+#X connect 51 0 50 0;
+#X connect 52 0 51 0;
+#X connect 53 0 51 1;
