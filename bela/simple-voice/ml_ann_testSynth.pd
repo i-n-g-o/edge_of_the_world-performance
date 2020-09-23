@@ -15,7 +15,7 @@
 #X obj 790 76 loadbang;
 #X obj 557 11 inlet;
 #X msg 154 415 write /Users/mikst/test3.data;
-#X obj 666 334 ml.ann;
+#X obj 645 331 ml.ann;
 #X obj 791 619 s mlp;
 #X obj 793 420 route read train;
 #X obj 847 461 sel 0 1;
@@ -111,8 +111,19 @@
 #X restore 599 416 pd testSynth;
 #X msg 976 349 read /root/training_testSynth.data;
 #X msg 1031 376 write /root/training_testSynth.data;
-#X obj 383 29 inlet;
+#X obj 409 9 inlet;
 #X obj 780 20 inlet;
+#X obj 447 544 unpack 0 0 0 0 0 0 0 0;
+#X obj 226 604 s ctrl1;
+#X obj 286 604 s ctrl2;
+#X obj 344 604 s ctrl3;
+#X obj 406 604 s ctrl4;
+#X obj 465 604 s ctrl5;
+#X obj 525 604 s ctrl6;
+#X obj 583 604 s ctrl7;
+#X obj 645 604 s ctrl8;
+#X obj 534 278 print map:;
+#X obj 287 77 print ml_mode:;
 #X connect 0 0 16 0;
 #X connect 1 0 16 0;
 #X connect 2 0 16 0;
@@ -127,6 +138,7 @@
 #X connect 14 0 36 1;
 #X connect 15 0 16 0;
 #X connect 16 0 42 0;
+#X connect 16 0 47 0;
 #X connect 16 1 18 0;
 #X connect 16 1 27 0;
 #X connect 18 0 21 0;
@@ -147,6 +159,7 @@
 #X connect 28 2 16 0;
 #X connect 29 0 16 0;
 #X connect 30 0 36 0;
+#X connect 30 0 57 0;
 #X connect 31 0 10 0;
 #X connect 32 0 33 0;
 #X connect 33 0 31 1;
@@ -165,3 +178,11 @@
 #X connect 45 0 37 0;
 #X connect 46 0 42 1;
 #X connect 46 0 31 1;
+#X connect 47 0 48 0;
+#X connect 47 1 49 0;
+#X connect 47 2 50 0;
+#X connect 47 3 51 0;
+#X connect 47 4 52 0;
+#X connect 47 5 53 0;
+#X connect 47 6 54 0;
+#X connect 47 7 55 0;
