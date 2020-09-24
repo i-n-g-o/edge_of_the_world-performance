@@ -1,4 +1,4 @@
-#N canvas 238 190 1258 855 12;
+#N canvas 182 23 1258 855 12;
 #X obj 27 188 oscparse;
 #X obj 27 20 inlet;
 #X obj 63 362 route volume;
@@ -64,16 +64,17 @@
 #X obj 115 100 t b;
 #X obj 192 170 print connected clients;
 #X obj 484 417 route osc_log ip;
-#X obj 219 371 route on send speed;
 #X obj 302 404 i;
 #X obj 296 540 s sensor_speed;
+#X obj 219 370 route on send speed base;
+#X obj 321 482 s sensor_base;
 #X connect 0 0 22 0;
 #X connect 1 0 53 0;
 #X connect 1 0 57 0;
 #X connect 2 0 4 0;
 #X connect 3 0 48 0;
 #X connect 3 1 2 0;
-#X connect 3 2 63 0;
+#X connect 3 2 65 0;
 #X connect 3 3 25 0;
 #X connect 3 4 36 0;
 #X connect 4 0 5 0;
@@ -141,7 +142,8 @@
 #X connect 60 0 59 0;
 #X connect 62 0 32 0;
 #X connect 62 1 41 0;
-#X connect 63 0 26 0;
-#X connect 63 1 31 0;
-#X connect 63 2 64 0;
-#X connect 64 0 65 0;
+#X connect 63 0 64 0;
+#X connect 65 0 26 0;
+#X connect 65 1 31 0;
+#X connect 65 2 63 0;
+#X connect 65 3 66 0;
