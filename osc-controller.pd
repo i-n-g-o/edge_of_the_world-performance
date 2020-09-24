@@ -1,6 +1,6 @@
-#N canvas 200 23 1436 855 12;
+#N canvas 4 23 1436 855 12;
 #X declare -path bela/_common;
-#X obj 110 698 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 60 745 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 225 428 loadbang;
 #X obj 64 40 tgl 15 0 empty empty train 17 7 0 10 -262144 -1 -1 0 1
@@ -9,7 +9,7 @@
 0 1;
 #X obj 641 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 37 159 tgl 15 0 empty empty sensor_on 17 7 0 10 -262144 -1 -1
+#X obj 52 110 tgl 15 0 empty empty sensor_on 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 670 119 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
@@ -40,7 +40,7 @@
 -1 -1 0 1;
 #X obj 1276 333 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
-#X obj 40 228 tgl 15 0 empty empty sensor_send 17 7 0 10 -262144 -1
+#X obj 55 179 tgl 15 0 empty empty sensor_send 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 1055 542 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
@@ -92,8 +92,8 @@
 #X obj 516 67 oscfmt ml read;
 #X obj 641 67 oscfmt ml train;
 #X obj 816 61 oscfmt mode;
-#X obj 37 186 oscfmt sensor on;
-#X obj 40 255 oscfmt sensor send;
+#X obj 52 137 oscfmt sensor on;
+#X obj 55 206 oscfmt sensor send;
 #X obj 367 181 oscfmt audio volume;
 #X obj 527 314 oscfmt system osc_log;
 #X obj 670 255 oscfmt ctrl ctrl1;
@@ -114,7 +114,7 @@
 #X symbolatom 700 679 10 0 0 0 - - -;
 #X obj 700 627 r p_id;
 #X obj 700 653 symbol;
-#X obj 109 589 r to_ctrl_netsend;
+#X obj 59 636 r to_ctrl_netsend;
 #X obj 79 335 bng 15 250 50 0 empty empty get_ip 17 7 0 10 -262144
 -1 -1;
 #X obj 1002 127 route ip;
@@ -127,13 +127,6 @@
 #X obj 207 67 oscfmt ml sensor;
 #X obj 482 378 tgl 15 0 empty empty ctrl_send 17 7 0 10 -262144 -1
 -1 0 1;
-#X msg 412 748 edge1 p2;
-#X msg 412 774 ingo p1;
-#X msg 411 805 mika p3;
-#X text 511 712 werkstatt;
-#X text 494 747 192.168.0.75;
-#X text 491 773 192.168.0.181;
-#X text 488 804 192.168.0.46;
 #X obj 1230 157 netsend -u -b;
 #X obj 1230 129 spigot;
 #X obj 1269 50 tgl 15 0 empty empty resend_to_localhost 17 7 0 10 -262144
@@ -146,9 +139,9 @@
 -1;
 #X obj 518 115 oscfmt ml clear;
 #X msg 769 732 clear;
-#X obj 110 671 netsend -b;
+#X obj 60 718 netsend -b;
 #X obj 89 812 declare -path bela/_common;
-#X obj 193 643 r to_ctrl_netsend_direct;
+#X obj 138 667 r to_ctrl_netsend_direct;
 #N canvas 436 260 555 551 ip_storage 0;
 #X obj 151 301 coll;
 #C restore;
@@ -197,25 +190,34 @@
 #X msg 226 452 connect 192.168.0.255 50444;
 #X obj 367 148 change;
 #X floatatom 367 116 5 0 1 0 - - -;
-#X obj 242 210 change;
-#X floatatom 242 178 5 10 2000 0 - - -;
-#X obj 242 243 oscfmt sensor speed;
-#X msg 231 150 40;
-#X msg 267 150 100;
+#X obj 232 180 change;
+#X floatatom 232 148 5 10 2000 0 - - -;
+#X obj 232 213 oscfmt sensor speed;
+#X msg 221 120 40;
+#X msg 257 120 100;
 #X obj 521 139 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 521 169 oscfmt ml voicefade;
-#X obj 291 284 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 291 323 oscfmt sensor base;
+#X obj 46 238 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 46 277 oscfmt sensor base;
 #X obj 524 228 oscfmt ml voicetype;
 #X msg 519 200 1;
 #X msg 554 200 2;
 #X msg 588 201 3;
 #X msg 236 511 connect 192.168.178.255 50444;
 #X msg 252 477 disconnect;
-#X obj 109 616 slipenc;
-#X connect 1 0 114 0;
+#X obj 59 663 slipenc;
+#X msg 321 257 1;
+#X msg 356 257 2;
+#X msg 390 258 3;
+#X obj 326 285 oscfmt ml filenum;
+#X msg 423 259 4;
+#X msg 458 259 5;
+#X msg 206 722 connect localhost 50555;
+#X msg 205 700 disconnect;
+#X msg 495 258 10;
+#X connect 1 0 107 0;
 #X connect 2 0 71 0;
 #X connect 3 0 88 0;
 #X connect 4 0 55 0;
@@ -254,7 +256,7 @@
 #X connect 42 0 68 0;
 #X connect 43 0 56 0;
 #X connect 44 0 45 0;
-#X connect 44 0 109 0;
+#X connect 44 0 102 0;
 #X connect 45 0 46 0;
 #X connect 45 1 48 0;
 #X connect 45 2 49 0;
@@ -275,41 +277,49 @@
 #X connect 75 0 73 1;
 #X connect 77 0 78 0;
 #X connect 78 0 76 0;
-#X connect 79 0 132 0;
+#X connect 79 0 125 0;
 #X connect 80 0 84 0;
 #X connect 81 0 82 0;
-#X connect 81 0 109 1;
+#X connect 81 0 102 1;
 #X connect 81 1 73 0;
 #X connect 83 0 81 0;
-#X connect 83 1 98 0;
-#X connect 84 0 111 0;
+#X connect 83 1 91 0;
+#X connect 84 0 104 0;
 #X connect 85 0 47 0;
 #X connect 86 0 60 0;
 #X connect 87 0 60 0;
 #X connect 89 0 69 0;
-#X connect 97 0 101 0;
-#X connect 98 0 97 0;
-#X connect 99 0 98 1;
-#X connect 100 0 97 0;
-#X connect 102 0 100 0;
-#X connect 103 0 104 0;
-#X connect 105 0 109 0;
-#X connect 106 0 0 0;
-#X connect 108 0 106 0;
-#X connect 110 0 113 0;
-#X connect 112 0 110 0;
-#X connect 114 0 110 0;
-#X connect 115 0 59 0;
-#X connect 116 0 115 0;
-#X connect 117 0 119 0;
-#X connect 118 0 117 0;
-#X connect 120 0 118 0;
-#X connect 121 0 118 0;
-#X connect 122 0 123 0;
-#X connect 124 0 125 0;
-#X connect 127 0 126 0;
-#X connect 128 0 126 0;
-#X connect 129 0 126 0;
-#X connect 130 0 110 0;
-#X connect 131 0 110 0;
-#X connect 132 0 106 0;
+#X connect 90 0 94 0;
+#X connect 91 0 90 0;
+#X connect 92 0 91 1;
+#X connect 93 0 90 0;
+#X connect 95 0 93 0;
+#X connect 96 0 97 0;
+#X connect 98 0 102 0;
+#X connect 99 0 0 0;
+#X connect 101 0 99 0;
+#X connect 103 0 106 0;
+#X connect 105 0 103 0;
+#X connect 107 0 103 0;
+#X connect 108 0 59 0;
+#X connect 109 0 108 0;
+#X connect 110 0 112 0;
+#X connect 111 0 110 0;
+#X connect 113 0 111 0;
+#X connect 114 0 111 0;
+#X connect 115 0 116 0;
+#X connect 117 0 118 0;
+#X connect 120 0 119 0;
+#X connect 121 0 119 0;
+#X connect 122 0 119 0;
+#X connect 123 0 103 0;
+#X connect 124 0 103 0;
+#X connect 125 0 99 0;
+#X connect 126 0 129 0;
+#X connect 127 0 129 0;
+#X connect 128 0 129 0;
+#X connect 130 0 129 0;
+#X connect 131 0 129 0;
+#X connect 132 0 99 0;
+#X connect 133 0 99 0;
+#X connect 134 0 129 0;
