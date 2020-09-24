@@ -37,7 +37,7 @@
 #X obj 432 465 spigot 1;
 #X obj 427 442 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 483 323 route system mode;
+#X obj 483 324 route system mode;
 #X obj 541 350 i;
 #X obj 540 374 s mapping_mode;
 #X obj 87 297 route p0;
@@ -94,8 +94,8 @@
 #X connect 16 0 47 6;
 #X connect 17 0 21 0;
 #X connect 17 0 47 7;
-#X connect 22 0 34 0;
 #X connect 22 0 43 0;
+#X connect 22 0 34 0;
 #X connect 24 0 23 0;
 #X connect 25 0 6 0;
 #X connect 25 1 7 0;
@@ -137,7 +137,6 @@
 #X connect 55 0 54 0;
 #X connect 56 0 55 0;
 #X connect 57 0 59 0;
-#X connect 58 0 66 0;
 #X connect 59 0 58 0;
 #X connect 61 0 32 0;
 #X connect 61 1 41 0;

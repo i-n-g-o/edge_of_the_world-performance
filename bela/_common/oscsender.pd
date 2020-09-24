@@ -54,6 +54,7 @@
 #X obj 62 29 metro 40;
 #X obj 223 36 loadbang;
 #X obj 147 12 r sensor_speed;
+#X msg 192 78 1;
 #X connect 0 0 21 0;
 #X connect 1 0 11 0;
 #X connect 2 0 50 1;
@@ -110,4 +111,6 @@
 #X connect 50 0 0 0;
 #X connect 51 0 50 0;
 #X connect 52 0 51 0;
+#X connect 52 0 54 0;
 #X connect 53 0 51 1;
+#X connect 54 0 10 0;
