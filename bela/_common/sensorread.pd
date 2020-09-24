@@ -1,4 +1,4 @@
-#N canvas 0 23 690 573 12;
+#N canvas 4 23 811 588 12;
 #X obj 540 139 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 176 306 snapshot~;
@@ -25,6 +25,7 @@
 #X obj 510 34 loadbang;
 #X msg 510 60 1;
 #X obj 540 157 metro 40;
+#X obj 590 79 r sensor_speed;
 #X connect 0 0 24 0;
 #X connect 1 0 10 4;
 #X connect 2 0 10 5;
@@ -63,3 +64,4 @@
 #X connect 22 0 23 0;
 #X connect 23 0 0 0;
 #X connect 24 0 11 0;
+#X connect 25 0 24 1;
