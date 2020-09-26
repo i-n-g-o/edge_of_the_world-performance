@@ -1,4 +1,4 @@
-#N canvas 4 23 460 362 12;
+#N canvas 62 332 460 362 12;
 #X obj 28 150 abs;
 #X obj 28 177 min 1;
 #X obj 29 125 scale 0 1 0 1;
