@@ -1,0 +1,152 @@
+#N canvas 196 23 1401 837 12;
+#X obj 1203 687 array define grainArray;
+#X text 1312 605 duration in samples;
+#X obj 1209 579 soundfiler;
+#X floatatom 1209 603 0 0 0 0 - - -;
+#X obj 880 648 s grainDur;
+#X floatatom 880 617 10 0 0 0 - - -;
+#X obj 44 509 clone grain 16;
+#X msg 45 456 next \$1;
+#X text 107 456 target next voice;
+#X obj 42 271 phasor~;
+#X text 105 270 0-1;
+#X obj 45 349 *~;
+#X text 80 350 0-dur in samples;
+#X floatatom 243 317 20 0 0 0 - - -;
+#X obj 225 257 r fileDur;
+#X obj 1209 627 s fileDur;
+#X obj 474 345 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 472 372 metro 125;
+#X floatatom 23 112 10 0 0 0 - - -;
+#X obj 25 11 r fileDur;
+#X obj 129 12 loadbang;
+#X obj 128 41 samplerate~;
+#X obj 22 84 expr $f2 / $f1;
+#X obj 198 14 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 113 113 normal speed for this sample;
+#X obj 42 238 * 1;
+#X floatatom 152 163 10 0 0 0 - - -;
+#X text 232 158 playback rate (1 is normal);
+#X floatatom 584 342 5 0 0 0 - - -;
+#X obj 472 406 random 10;
+#X obj 472 430 + 50;
+#X floatatom 567 407 5 0 0 0 - - -;
+#X floatatom 562 433 5 0 0 0 - - -;
+#X text 509 427 jitter;
+#X obj 46 417 snapshot~;
+#X obj 506 143 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 0 1;
+#X obj 510 242 nbx 15 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
+10 -228856 -1 -1 0 256;
+#X obj 510 184 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X text 570 183 <= input;
+#X text 618 240 <= scaled value;
+#X obj 841 154 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 0 1;
+#X obj 835 252 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 838 191 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X text 898 190 <= input;
+#X text 900 250 <= scaled value;
+#X obj 1067 159 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 0 1;
+#X obj 1064 245 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
+10 -228856 -1 -1 0 256;
+#X obj 1064 187 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0
+10 -228856 -1 -1 0 256;
+#X text 1124 186 <= input;
+#X text 1126 246 <= scaled value;
+#X obj 1108 404 loadbang;
+#X obj 472 317 loadbang;
+#X obj 151 184 t b f;
+#X obj 877 578 loadmess 70;
+#X obj 627 404 loadmess 35;
+#X obj 571 314 loadmess 35;
+#X obj 49 850 *~ 0.1;
+#X msg 1210 536 read -resize Julia_trainingAudio_k.wav grainArray;
+#X obj 117 670 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -228856
+-1 -1 0 1;
+#X obj 114 750 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X obj 114 692 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-228856 -1 -1 0 256;
+#X text 174 691 <= input;
+#X text 176 751 <= scaled value;
+#X text 969 618 grain duration;
+#X obj 604 434 loadmess 30;
+#X text 628 342 grain rate;
+#X obj 149 135 loadmess 0.001;
+#X msg 1219 498 read -resize phonemes_one_file.wav grainArray;
+#X msg 1108 444 read -resize singing_mix.wav grainArray;
+#X obj 510 212 scale 0 1 -0.7 1e+07;
+#X obj 837 214 scale 0 1 5 300;
+#X obj 1064 215 scale 0 1 60 240;
+#X obj 114 720 scale 0 1 0 0.2;
+#X obj 688 22 inlet;
+#X obj 687 60 unpack 0 0 0 0 0 0 0 0;
+#X obj 72 898 throw~ outL;
+#X obj 164 899 throw~ outR;
+#X connect 2 0 3 0;
+#X connect 3 0 15 0;
+#X connect 5 0 4 0;
+#X connect 6 0 56 0;
+#X connect 7 0 6 0;
+#X connect 9 0 11 0;
+#X connect 11 0 34 0;
+#X connect 13 0 11 1;
+#X connect 14 0 13 0;
+#X connect 16 0 17 0;
+#X connect 17 0 29 0;
+#X connect 17 0 34 0;
+#X connect 18 0 25 0;
+#X connect 19 0 22 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 1;
+#X connect 22 0 18 0;
+#X connect 23 0 21 0;
+#X connect 25 0 9 0;
+#X connect 26 0 52 0;
+#X connect 28 0 17 1;
+#X connect 29 0 30 0;
+#X connect 31 0 29 1;
+#X connect 32 0 30 1;
+#X connect 34 0 7 0;
+#X connect 35 0 37 0;
+#X connect 36 0 13 0;
+#X connect 37 0 69 0;
+#X connect 40 0 42 0;
+#X connect 42 0 70 0;
+#X connect 45 0 47 0;
+#X connect 47 0 71 0;
+#X connect 50 0 68 0;
+#X connect 51 0 16 0;
+#X connect 52 0 25 0;
+#X connect 52 1 25 1;
+#X connect 53 0 5 0;
+#X connect 54 0 31 0;
+#X connect 55 0 28 0;
+#X connect 56 0 75 0;
+#X connect 56 0 76 0;
+#X connect 57 0 2 0;
+#X connect 58 0 60 0;
+#X connect 60 0 72 0;
+#X connect 64 0 32 0;
+#X connect 66 0 26 0;
+#X connect 67 0 2 0;
+#X connect 68 0 2 0;
+#X connect 69 0 36 0;
+#X connect 70 0 41 0;
+#X connect 70 0 28 0;
+#X connect 71 0 46 0;
+#X connect 71 0 5 0;
+#X connect 72 0 59 0;
+#X connect 72 0 56 1;
+#X connect 73 0 74 0;
+#X connect 74 0 35 0;
+#X connect 74 1 40 0;
+#X connect 74 2 45 0;
+#X connect 74 3 58 0;
