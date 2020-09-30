@@ -1,4 +1,4 @@
-#N canvas 359 145 1029 639 10;
+#N canvas 359 23 1029 639 10;
 #X obj 34 31 loadbang;
 #X text 802 397 it will be sent to bela_i2c_in;
 #X text 803 366 When the result of the read;
