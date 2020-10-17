@@ -1,0 +1,27 @@
+#N canvas 279 125 562 501 12;
+#X obj 225 372 zmq;
+#X msg 310 204 socket subscribe;
+#X obj 231 170 t b b b;
+#X obj 285 85 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 362 343 close;
+#X obj 195 76 loadbang;
+#X obj 255 232 symbol \$1;
+#X msg 254 259 connect tcp://\$1;
+#X obj 86 201 symbol \$2;
+#X obj 87 226 list prepend subscribe;
+#X obj 87 250 list trim;
+#X obj 224 421 outlet;
+#X connect 0 0 11 0;
+#X connect 1 0 0 0;
+#X connect 2 0 8 0;
+#X connect 2 1 6 0;
+#X connect 2 2 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 0 0;
