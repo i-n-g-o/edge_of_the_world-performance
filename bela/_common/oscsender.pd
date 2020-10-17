@@ -1,4 +1,5 @@
-#N canvas 4 107 1436 691 12;
+#N canvas 4 187 1436 691 12;
+#X declare -lib zexy;
 #X obj 78 231 spigot;
 #X msg 147 142 1;
 #X obj 98 61 r sensors;
@@ -55,7 +56,7 @@
 #X obj 223 36 loadbang;
 #X obj 147 12 r sensor_speed;
 #X msg 192 78 1;
-#N canvas 4 23 528 608 timestamp 0;
+#N canvas 355 23 528 608 timestamp 1;
 #X obj 83 102 time, f 17;
 #X text 210 137 msec;
 #X text 203 234 sec;
@@ -65,10 +66,22 @@
 #X obj 111 271 * 60000;
 #X obj 92 309 * 3.6e+06;
 #X obj 92 346 expr $f1 + $f2 + $f3 + $f4;
-#X obj 91 71 t b;
-#X obj 91 34 inlet;
+#X obj 82 68 t b;
+#X obj 239 35 inlet;
 #X obj 92 431 outlet;
 #X floatatom 135 177 5 0 0 0 - - -;
+#X obj 316 27 declare -lib zexy;
+#X msg 47 321 3.33;
+#X obj 82 37 loadbang;
+#X obj 302 405 f;
+#X obj 289 454 + 40;
+#X obj 466 50 inlet;
+#X obj 272 247 t b;
+#X obj 299 124 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 25 75 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 273 489 t f f;
 #X connect 0 0 7 0;
 #X connect 0 1 6 0;
 #X connect 0 1 12 0;
@@ -77,10 +90,20 @@
 #X connect 5 0 8 2;
 #X connect 6 0 8 1;
 #X connect 7 0 8 0;
-#X connect 8 0 11 0;
+#X connect 8 0 16 1;
 #X connect 9 0 0 0;
-#X connect 10 0 9 0;
-#X restore 110 300 pd timestamp;
+#X connect 10 0 19 0;
+#X connect 14 0 11 0;
+#X connect 15 0 9 0;
+#X connect 16 0 17 0;
+#X connect 17 0 22 0;
+#X connect 18 0 17 1;
+#X connect 19 0 16 0;
+#X connect 20 0 19 0;
+#X connect 21 0 0 0;
+#X connect 22 0 11 0;
+#X connect 22 1 16 1;
+#X restore 154 300 pd timestamp;
 #X obj 78 269 t l b;
 #X obj 78 336 list;
 #X connect 0 0 56 0;
@@ -141,6 +164,7 @@
 #X connect 52 0 51 0;
 #X connect 52 0 54 0;
 #X connect 53 0 51 1;
+#X connect 53 0 55 1;
 #X connect 54 0 10 0;
 #X connect 55 0 57 1;
 #X connect 56 0 57 0;

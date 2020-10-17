@@ -12,12 +12,12 @@
 #X obj 165 348 * 44.1;
 #X floatatom 79 414 10 0 0 0 - - -;
 #X msg 52 557 \$1 \, \$2 \$3, f 14;
-#X obj 372 225 loadbang;
-#X obj 372 249 samplerate~;
-#X obj 372 273 / 1000;
-#X text 464 250 update sample rate;
+#X obj 316 353 loadbang;
+#X obj 316 377 samplerate~;
+#X obj 316 401 / 1000;
+#X text 408 378 update sample rate;
 #X obj 53 694 outlet~;
-#X obj 50 48 t f b, f 90;
+#X obj 50 48 t f b, f 85;
 #X obj 674 218 t b b;
 #X obj 674 242 del 50;
 #X msg 786 246 1;
@@ -25,19 +25,15 @@
 #X obj 674 290 pack f 50;
 #X obj 674 314 line~;
 #X text 762 292 volume control;
-#X obj 55 659 *~, f 91;
+#X obj 52 653 *~, f 91;
 #X obj 166 290 r grainDur;
 #X obj 800 129 r grainDur;
 #X obj 800 153 - 50;
 #X obj 50 -23 inlet;
-#X obj 293 135 scale 0.1 0.9 1 10000;
-#X floatatom 322 160 15 0 0 0 - - -;
-#X floatatom 94 13 5 0 0 0 - - -;
-#X obj 107 135 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
-#X floatatom 107 166 15 0 0 0 - - -;
-#X obj 105 111 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 230 -14 inlet;
+#X floatatom 230 11 15 0 0 0 - - -;
+#X obj 231 179 scale 0.1 0.9 1 10000;
+#X floatatom 260 204 15 0 0 0 - - -;
 #X connect 0 0 26 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
@@ -67,8 +63,7 @@
 #X connect 28 0 29 0;
 #X connect 29 0 20 1;
 #X connect 30 0 18 0;
-#X connect 30 0 33 0;
 #X connect 31 0 32 0;
-#X connect 34 0 35 0;
-#X connect 35 0 2 0;
-#X connect 36 0 34 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 0 2 0;
