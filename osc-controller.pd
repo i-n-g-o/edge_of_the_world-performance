@@ -1,4 +1,4 @@
-#N canvas 10 23 1279 855 12;
+#N canvas 35 23 1279 855 12;
 #X declare -path bela/_common;
 #X obj 210 714 loadbang;
 #X obj 49 16 tgl 15 0 empty empty train 17 7 0 10 -262144 -1 -1 0 1
@@ -18,25 +18,25 @@
 #X obj 818 123 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1095 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 914 1;
 #X obj 1126 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 1080 1;
 #X obj 1158 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3670 1;
 #X obj 1190 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 8369 1;
 #X obj 373 29 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 516 28 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 1221 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 8839 1;
 #X obj 1252 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3835 1;
 #X obj 1284 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 2235 1;
 #X obj 1316 180 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 7531 1;
 #X obj 55 179 tgl 15 0 empty empty sensor_send 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 1095 389 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -65,9 +65,9 @@
 #X obj 942 123 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 816 37 hradio 15 1 0 8 empty empty mode 0 -8 0 10 -262144 -1
--1 2;
+-1 0;
 #X obj 705 567 hradio 15 1 0 8 empty empty id 0 -8 0 10 -262144 -1
--1 1;
+-1 0;
 #X obj 705 587 sel 0 1 2 3 4 5;
 #X msg 660 619 p1;
 #X obj 725 665 s p_id;
@@ -243,21 +243,21 @@
 #X obj 1482 28 zmq_sub 192.168.0.10:5555 mapped;
 #X obj 1484 55 route mapped;
 #X obj 1456 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 337 1;
 #X obj 1487 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 120 1;
 #X obj 1519 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 2880 1;
 #X obj 1551 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 8200 1;
 #X obj 1582 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 9032 1;
 #X obj 1613 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 3358 1;
 #X obj 1645 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 1438 1;
 #X obj 1677 179 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 0 1;
+-1 -1 7403 1;
 #X obj 1456 388 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 1487 388 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
