@@ -5,7 +5,7 @@
 #X obj 98 61 r sensors;
 #X obj 1067 204 spigot;
 #X obj 1106 179 r log_control_values;
-#X obj 1067 230 print ctrl;
+#X obj 1067 238 print ctrl;
 #X obj 1027 412 spigot;
 #X obj 1066 275 r ctrl_send;
 #X obj 126 109 r sensor_send;
@@ -151,7 +151,6 @@
 #X connect 39 0 40 0;
 #X connect 39 1 38 0;
 #X connect 40 0 50 0;
-#X connect 41 0 45 0;
 #X connect 42 0 41 0;
 #X connect 43 0 48 0;
 #X connect 43 1 42 0;
