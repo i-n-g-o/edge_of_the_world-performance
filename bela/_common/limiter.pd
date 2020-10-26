@@ -1,0 +1,20 @@
+#N canvas 4 23 450 300 12;
+#X obj 62 191 *~;
+#X obj 92 69 env~;
+#X obj 92 91 dbtorms;
+#X obj 92 135 -;
+#X obj 92 157 lop~ 20;
+#X obj 229 85 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 12700 1;
+#X msg 92 113 1 \$1;
+#X obj 62 4 inlet~;
+#X obj 62 266 outlet~;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 1;
+#X connect 6 0 3 0;
+#X connect 7 0 1 0;
+#X connect 7 0 0 0;
