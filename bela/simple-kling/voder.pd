@@ -1,4 +1,4 @@
-#N canvas 20 50 1718 911 10;
+#N canvas 20 50 1280 755 10;
 #X obj 908 899 dac~;
 #X obj 966 211 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
 -1 -1 10160 1;
@@ -530,28 +530,6 @@ out to env;
 #X restore 1004 333 pd fadeInOut;
 #X obj 1016 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#N canvas 20 50 1718 911 limiter 0;
-#X obj 37 204 *~;
-#X obj 67 82 env~;
-#X obj 67 104 dbtorms;
-#X obj 67 148 -;
-#X obj 67 170 lop~ 20;
-#X obj 188 98 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2600 1;
-#X msg 67 126 1 \$1;
-#X obj 41 31 inlet~;
-#X obj 36 260 outlet~;
-#X obj 197 32 inlet;
-#X connect 0 0 8 0;
-#X connect 1 0 2 0;
-#X connect 2 0 6 0;
-#X connect 3 0 4 0;
-#X connect 3 0 5 0;
-#X connect 4 0 0 1;
-#X connect 6 0 3 0;
-#X connect 7 0 0 0;
-#X connect 7 0 1 0;
-#X restore 949 829 pd limiter;
 #X connect 1 0 64 0;
 #X connect 1 0 32 0;
 #X connect 2 0 22 0;
