@@ -1,4 +1,4 @@
-#N canvas 4 41 1280 755 10;
+#N canvas 4 123 1280 755 10;
 #X declare -path ../_common;
 #X obj 908 899 dac~;
 #X obj 976 208 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
@@ -38,7 +38,7 @@
 #X obj 550 136 expr 44100/$f1;
 #X obj 573 275 tabread4~ array1;
 #X obj 1267 24 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 350 1;
+-1 -1 2100 1;
 #X obj 596 178 scale 0 1 0.005 0.05;
 #X obj 815 178 scale 0 1 0.005 0.05;
 #X obj 1260 -32 inlet;
@@ -75,7 +75,7 @@
 #X obj 720 898 throw~ outL;
 #X obj 796 898 throw~ outR;
 #X obj 953 697 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 3780 1;
+-1 -1 5080 1;
 #X text 1103 700 <= low pass filter;
 #X obj 810 768 vradio 15 1 0 3 empty empty empty 0 -8 0 10 -228856
 -1 -1 2;
@@ -85,7 +85,7 @@
 #X text 831 768 <= route to correct output (0 closed \, 1 bela \, 2
 laptop);
 #X obj 300 -166 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 700 1;
+-1 -1 4200 1;
 #X text 439 -165 <= playback speed;
 #N canvas 4 23 1280 755 formants 0;
 #X obj 37 135 inlet~;
@@ -109,11 +109,11 @@ laptop);
 #X obj 328 32 inlet;
 #X obj 378 32 inlet;
 #X obj 263 164 vsl 15 128 200 900 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4200 1;
+-1 -1 7100 1;
 #X obj 330 166 vsl 15 128 800 2500 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 12000 1;
+-262144 -1 -1 900 1;
 #X obj 384 163 vsl 15 128 2600 3100 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 10200 1;
+-262144 -1 -1 2800 1;
 #X msg 276 408 30;
 #X msg 381 407 80;
 #X msg 507 405 100;
@@ -173,9 +173,9 @@ laptop);
 #X connect 40 0 22 0;
 #X restore 815 419 pd formants;
 #X obj 403 63 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 9800 1;
+-1 -1 11400 1;
 #X obj 435 80 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 9700 1;
+-1 -1 7500 1;
 #X obj 815 450 *~ 4;
 #X obj 1625 -81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -185,9 +185,9 @@ laptop);
 #X obj 967 460 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 10160 1;
 #X text 1108 212 <= main voder volume;
-#N canvas 4 23 1436 855 variableLowPass 0;
+#N canvas 291 23 705 424 variableLowPass 1;
 #X obj 231 250 hsl 128 15 10000 0 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 12427 1;
+-262144 -1 -1 12408 1;
 #X obj 47 245 lop~;
 #X floatatom 228 274 5 0 0 0 - - -;
 #N canvas 248 126 626 481 expo 0;
@@ -254,20 +254,23 @@ laptop);
 #X text 446 22 <= incoming main lowPass slider;
 #X text 190 52 <= incoming velocity value;
 #X obj 228 224 scale 1 0 10000 200;
+#X obj 509 131 loadbang;
+#X msg 510 151 0.4;
 #X connect 0 0 1 1;
 #X connect 0 0 2 0;
 #X connect 1 0 8 0;
 #X connect 3 0 14 0;
 #X connect 4 0 6 0;
 #X connect 5 0 3 0;
-#X connect 6 0 5 0;
 #X connect 9 0 1 0;
 #X connect 10 0 4 0;
 #X connect 10 0 6 1;
+#X connect 10 0 5 0;
 #X connect 11 0 6 0;
 #X connect 14 0 0 0;
+#X connect 15 0 16 0;
 #X restore 900 731 pd variableLowPass;
-#N canvas 4 23 1436 855 variableHiPass 1;
+#N canvas 33 23 622 472 variableHiPass 0;
 #X obj 46 478 outlet~;
 #X obj 46 9 inlet~;
 #X obj 189 64 inlet;
@@ -276,7 +279,7 @@ laptop);
 #X text 235 65 <= incoming velocity value;
 #X floatatom 210 368 5 0 0 0 - - -;
 #X obj 213 344 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 13 1;
+-262144 -1 -1 50 1;
 #N canvas 248 126 626 481 expo 0;
 #X obj 93 113 inlet;
 #X obj 203 204 < 0;
@@ -329,7 +332,7 @@ laptop);
 #X connect 21 0 3 0;
 #X restore 210 304 pd expo;
 #X obj 210 325 scale 0 1 0 10000;
-#X obj 213 276 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+#X obj 213 274 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 0 1;
 #X text 237 238 <= voder high pass minus velocty val;
 #X obj 209 239 - 1;
@@ -338,23 +341,22 @@ laptop);
 #X obj 46 402 hip~;
 #X connect 1 0 14 0;
 #X connect 2 0 13 0;
-#X connect 2 0 12 1;
+#X connect 2 0 8 0;
 #X connect 3 0 12 0;
 #X connect 7 0 6 0;
 #X connect 7 0 14 1;
 #X connect 8 0 9 0;
 #X connect 9 0 7 0;
 #X connect 10 0 8 0;
-#X connect 12 0 10 0;
 #X connect 13 0 12 0;
 #X connect 14 0 0 0;
 #X restore 910 601 pd variableHiPass;
 #X obj 948 575 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 0 1;
+-1 -1 127 1;
 #X text 1092 573 <= high pass filter;
 #X obj 947 548 loadmess 0.01;
 #X obj 159 50 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 3000 1;
+-1 -1 500 1;
 #X obj 1654 -58 r f1;
 #X obj 1685 -58 r f2;
 #X obj 1717 -58 r f3;
@@ -409,7 +411,7 @@ laptop);
 #N canvas 0 0 981 987 phasor 0;
 #X obj 227 233 phasor~;
 #X obj 228 33 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 700 1;
+-1 -1 4200 1;
 #X floatatom 227 205 5 0 0 0 - - -;
 #X obj 227 175 scale 0 1 50 500;
 #X obj 349 403 outlet~;
@@ -443,11 +445,11 @@ laptop);
 #X obj 421 333 *~ 4;
 #X obj 950 670 loadmess 0.4;
 #X obj 832 185 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 4200 1;
+-1 -1 7100 1;
 #X obj 856 185 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 12000 1;
+-1 -1 900 1;
 #X obj 878 185 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 10200 1;
+-1 -1 2800 1;
 #X obj 792 326 s f1;
 #X obj 847 337 s f2;
 #X obj 908 332 s f3;
@@ -548,6 +550,8 @@ laptop);
 #X obj 810 840 gate~ 2 2;
 #X obj 1742 -278 loadbang;
 #X msg 1747 -226 0 0 0 0 0 0 0 0;
+#X obj 678 649 VUmeter;
+#X obj 614 732 VUmeter;
 #X connect 1 0 114 0;
 #X connect 1 0 30 0;
 #X connect 1 0 29 1;
@@ -581,7 +585,9 @@ laptop);
 #X connect 29 0 30 0;
 #X connect 30 0 3 1;
 #X connect 32 0 116 1;
+#X connect 32 0 120 0;
 #X connect 33 0 32 0;
+#X connect 33 0 119 0;
 #X connect 34 0 33 2;
 #X connect 36 0 34 0;
 #X connect 37 0 58 0;
