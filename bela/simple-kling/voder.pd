@@ -2,7 +2,7 @@
 #X declare -path ../_common;
 #X obj 908 899 dac~;
 #X obj 976 208 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 10160 1;
+-1 -1 8778 1;
 #X obj 381 365 lop~ 20000;
 #X obj 860 500 *~ 0;
 #X obj 403 16 loadmess 0;
@@ -38,7 +38,7 @@
 #X obj 550 136 expr 44100/$f1;
 #X obj 573 275 tabread4~ array1;
 #X obj 1267 24 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2100 1;
+-1 -1 0 1;
 #X obj 596 178 scale 0 1 0.005 0.05;
 #X obj 815 178 scale 0 1 0.005 0.05;
 #X obj 1260 -32 inlet;
@@ -85,7 +85,7 @@
 #X text 831 768 <= route to correct output (0 closed \, 1 bela \, 2
 laptop);
 #X obj 300 -166 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 4200 1;
+-1 -1 0 1;
 #X text 439 -165 <= playback speed;
 #N canvas 4 23 1280 755 formants 0;
 #X obj 37 135 inlet~;
@@ -109,11 +109,11 @@ laptop);
 #X obj 328 32 inlet;
 #X obj 378 32 inlet;
 #X obj 263 164 vsl 15 128 200 900 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 7100 1;
+-1 -1 0 1;
 #X obj 330 166 vsl 15 128 800 2500 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 900 1;
+-262144 -1 -1 0 1;
 #X obj 384 163 vsl 15 128 2600 3100 0 0 empty empty empty 0 -9 0 10
--262144 -1 -1 2800 1;
+-262144 -1 -1 0 1;
 #X msg 276 408 30;
 #X msg 381 407 80;
 #X msg 507 405 100;
@@ -173,9 +173,9 @@ laptop);
 #X connect 40 0 22 0;
 #X restore 815 419 pd formants;
 #X obj 403 63 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 11400 1;
+-1 -1 0 1;
 #X obj 435 80 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 7500 1;
+-1 -1 0 1;
 #X obj 815 450 *~ 4;
 #X obj 1625 -81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -183,11 +183,11 @@ laptop);
 #X text 891 -330 <= inlet for gestiure values;
 #X obj 977 418 + 1;
 #X obj 967 460 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 10160 1;
+-1 -1 8778 1;
 #X text 1108 212 <= main voder volume;
-#N canvas 291 23 705 424 variableLowPass 1;
+#N canvas 291 23 705 424 variableLowPass 0;
 #X obj 231 250 hsl 128 15 10000 0 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 12408 1;
+-262144 -1 -1 11948 1;
 #X obj 47 245 lop~;
 #X floatatom 228 274 5 0 0 0 - - -;
 #N canvas 248 126 626 481 expo 0;
@@ -197,7 +197,7 @@ laptop);
 #X obj 264 153 hsl 128 15 1 20 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 668 1;
 #X obj 173 130 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
+-1 -1 7620 1;
 #X text 396 152 Exponent;
 #X text 303 129 Constant;
 #X obj 170 285 pow;
@@ -244,7 +244,7 @@ laptop);
 #X obj 213 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 245 178 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 2540 1;
 #X obj 227 141 - 1;
 #X text 255 140 <= voder low pass minus velocty val;
 #X obj 48 356 outlet~;
@@ -279,7 +279,7 @@ laptop);
 #X text 235 65 <= incoming velocity value;
 #X floatatom 210 368 5 0 0 0 - - -;
 #X obj 213 344 hsl 128 15 0 10000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 50 1;
+-262144 -1 -1 508 1;
 #N canvas 248 126 626 481 expo 0;
 #X obj 93 113 inlet;
 #X obj 203 204 < 0;
@@ -287,7 +287,7 @@ laptop);
 #X obj 264 153 hsl 128 15 1 20 0 0 empty empty empty -2 -8 0 10 -262144
 -1 -1 668 1;
 #X obj 173 130 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6350 1;
+-1 -1 7620 1;
 #X text 396 152 Exponent;
 #X text 303 129 Constant;
 #X obj 170 285 pow;
@@ -356,7 +356,7 @@ laptop);
 #X text 1092 573 <= high pass filter;
 #X obj 947 548 loadmess 0.01;
 #X obj 159 50 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 500 1;
+-1 -1 0 1;
 #X obj 1654 -58 r f1;
 #X obj 1685 -58 r f2;
 #X obj 1717 -58 r f3;
@@ -411,7 +411,7 @@ laptop);
 #N canvas 0 0 981 987 phasor 0;
 #X obj 227 233 phasor~;
 #X obj 228 33 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 4200 1;
+-1 -1 0 1;
 #X floatatom 227 205 5 0 0 0 - - -;
 #X obj 227 175 scale 0 1 50 500;
 #X obj 349 403 outlet~;
@@ -445,17 +445,14 @@ laptop);
 #X obj 421 333 *~ 4;
 #X obj 950 670 loadmess 0.4;
 #X obj 832 185 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 7100 1;
+-1 -1 0 1;
 #X obj 856 185 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 900 1;
+-1 -1 0 1;
 #X obj 878 185 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -203904
--1 -1 2800 1;
+-1 -1 0 1;
 #X obj 792 326 s f1;
 #X obj 847 337 s f2;
 #X obj 908 332 s f3;
-#X obj 1048 -190 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
-#X obj 1048 -233 env~;
-#X obj 1048 -213 - 100;
 #X obj 1068 184 r \$0-setvalue;
 #X obj 941 263 loadmess 0.8, f 14;
 #X text 1050 266 <= send a level for fade in/out;
@@ -466,7 +463,7 @@ laptop);
 #N canvas 4 23 1436 855 fadeInOut 0;
 #X obj 368 61 inlet;
 #X obj 186 313 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10160 1;
+-1 -1 8778 1;
 #X obj 238 332 f;
 #X obj 238 290 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -546,18 +543,14 @@ laptop);
 #X obj 934 99 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 1040 294 s main v;
-#X obj 747 542 VUmeter;
-#X obj 810 840 gate~ 2 2;
 #X obj 1742 -278 loadbang;
 #X msg 1747 -226 0 0 0 0 0 0 0 0;
-#X obj 678 649 VUmeter;
-#X obj 614 732 VUmeter;
-#X connect 1 0 114 0;
+#X obj 810 840 gate~ 2 1;
+#X connect 1 0 111 0;
 #X connect 1 0 30 0;
 #X connect 1 0 29 1;
 #X connect 2 0 22 0;
 #X connect 3 0 33 0;
-#X connect 3 0 115 0;
 #X connect 4 0 23 0;
 #X connect 4 0 24 0;
 #X connect 8 0 63 0;
@@ -571,7 +564,7 @@ laptop);
 #X connect 10 5 24 0;
 #X connect 10 6 20 0;
 #X connect 13 0 32 2;
-#X connect 15 0 116 0;
+#X connect 15 0 114 0;
 #X connect 20 0 8 0;
 #X connect 20 0 57 0;
 #X connect 20 0 50 0;
@@ -584,10 +577,8 @@ laptop);
 #X connect 26 0 27 0;
 #X connect 29 0 30 0;
 #X connect 30 0 3 1;
-#X connect 32 0 116 1;
-#X connect 32 0 120 0;
+#X connect 32 0 114 1;
 #X connect 33 0 32 0;
-#X connect 33 0 119 0;
 #X connect 34 0 33 2;
 #X connect 36 0 34 0;
 #X connect 37 0 58 0;
@@ -616,52 +607,50 @@ laptop);
 #X connect 68 0 71 0;
 #X connect 69 0 22 3;
 #X connect 69 0 72 0;
-#X connect 74 0 75 0;
-#X connect 75 0 73 0;
-#X connect 76 0 1 0;
-#X connect 77 0 82 0;
-#X connect 77 0 114 0;
-#X connect 80 0 1 0;
-#X connect 80 0 81 0;
-#X connect 81 0 77 0;
-#X connect 82 0 83 0;
-#X connect 84 0 83 0;
-#X connect 85 0 90 0;
-#X connect 86 0 109 0;
+#X connect 73 0 1 0;
+#X connect 74 0 79 0;
+#X connect 74 0 111 0;
+#X connect 77 0 1 0;
+#X connect 77 0 78 0;
+#X connect 78 0 74 0;
+#X connect 79 0 80 0;
+#X connect 81 0 80 0;
+#X connect 82 0 87 0;
+#X connect 83 0 106 0;
+#X connect 84 0 85 0;
+#X connect 85 0 106 0;
 #X connect 87 0 88 0;
-#X connect 88 0 109 0;
-#X connect 90 0 91 0;
-#X connect 90 1 92 0;
-#X connect 90 2 93 0;
-#X connect 90 3 94 0;
-#X connect 90 4 95 0;
-#X connect 90 5 96 0;
-#X connect 90 6 97 0;
-#X connect 90 7 98 0;
-#X connect 91 0 105 0;
-#X connect 92 0 104 0;
-#X connect 93 0 103 0;
-#X connect 94 0 103 1;
-#X connect 95 0 101 0;
-#X connect 96 0 100 0;
-#X connect 97 0 99 0;
+#X connect 87 1 89 0;
+#X connect 87 2 90 0;
+#X connect 87 3 91 0;
+#X connect 87 4 92 0;
+#X connect 87 5 93 0;
+#X connect 87 6 94 0;
+#X connect 87 7 95 0;
+#X connect 88 0 102 0;
+#X connect 89 0 101 0;
+#X connect 90 0 100 0;
+#X connect 91 0 100 1;
+#X connect 92 0 98 0;
+#X connect 93 0 97 0;
+#X connect 94 0 96 0;
+#X connect 95 0 96 1;
+#X connect 96 0 97 1;
+#X connect 97 0 98 1;
 #X connect 98 0 99 1;
-#X connect 99 0 100 1;
+#X connect 99 0 103 0;
 #X connect 100 0 101 1;
 #X connect 101 0 102 1;
-#X connect 102 0 106 0;
-#X connect 103 0 104 1;
-#X connect 104 0 105 1;
-#X connect 105 0 102 0;
-#X connect 106 0 107 0;
-#X connect 107 0 86 0;
-#X connect 110 0 33 1;
-#X connect 111 0 29 0;
-#X connect 112 0 32 1;
-#X connect 113 0 80 0;
-#X connect 116 0 12 0;
-#X connect 116 0 11 0;
-#X connect 116 1 0 0;
-#X connect 116 1 0 1;
-#X connect 117 0 118 0;
-#X connect 118 0 52 0;
+#X connect 102 0 99 0;
+#X connect 103 0 104 0;
+#X connect 104 0 83 0;
+#X connect 107 0 33 1;
+#X connect 108 0 29 0;
+#X connect 109 0 32 1;
+#X connect 110 0 77 0;
+#X connect 112 0 113 0;
+#X connect 113 0 52 0;
+#X connect 114 0 12 0;
+#X connect 114 0 11 0;
+#X connect 114 1 0 0;
+#X connect 114 1 0 1;
