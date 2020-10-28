@@ -11,7 +11,7 @@
 #X obj 87 226 list prepend subscribe;
 #X obj 87 250 list trim;
 #X obj 224 421 outlet;
-#X obj 67 79 inlet;
+#X obj 67 79 loadbang;
 #X connect 0 0 10 0;
 #X connect 1 0 0 0;
 #X connect 2 0 7 0;
