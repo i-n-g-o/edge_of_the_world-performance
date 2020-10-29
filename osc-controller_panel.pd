@@ -1,4 +1,4 @@
-#N canvas 158 23 1228 828 12;
+#N canvas 101 23 1213 820 12;
 #X declare -path bela/_common;
 #X obj 17 14 p_panels p1;
 #X obj 215 15 p_panels p2;
@@ -58,10 +58,9 @@
 #X connect 25 0 24 0;
 #X connect 27 0 24 0;
 #X connect 28 0 24 0;
-#X restore 526 740 pd network_related;
-#X msg 528 678 0 0.496063 0.299213 0.614173 0 0 0 0;
-#X text 525 654 grab presets;
-#X obj 524 768 declare -path bela/_common;
+#X restore 790 783 pd network_related;
+#X msg 650 754 1 0.924159 0.98339 1 1 0.265474 0.525548 0.097471;
+#X obj 932 783 declare -path bela/_common;
 #X obj 409 16 p_panels p3;
 #X obj 606 17 p_panels p4;
 #X obj 801 18 p_panels p5;
@@ -74,7 +73,7 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X restore 526 704 pd grabPresets;
+#X restore 648 780 pd grabPresets;
 #X obj 37 663 all-panels;
 #X text 37 644 CONTROL ALL;
 #X text 236 664 mode;
@@ -117,7 +116,7 @@
 #X connect 10 5 3 0;
 #X connect 10 6 4 0;
 #X coords 0 -1 1 1 120 40 2 100 100;
-#X restore 364 660 pd voder_presets;
+#X restore 364 643 pd voder_presets;
 #N canvas 0 23 450 300 phoneme_presets 0;
 #X obj 205 197 s presets;
 #X text 290 199 phoneme;
@@ -139,7 +138,7 @@
 #X connect 7 2 3 0;
 #X connect 7 3 4 0;
 #X coords 0 -1 1 1 120 40 2 100 100;
-#X restore 364 711 pd phoneme_presets;
+#X restore 364 694 pd phoneme_presets;
 #N canvas 0 23 816 294 granular_presets 0;
 #X text 412 223 granular;
 #X msg 368 62 0.964706 0.0393701 0.15748 0.976378 1 0 0 0;
@@ -170,15 +169,30 @@
 #X connect 10 5 5 0;
 #X connect 10 6 6 0;
 #X coords 0 -1 1 1 120 40 2 100 100;
-#X restore 364 762 pd granular_presets;
+#X restore 364 745 pd granular_presets;
 #X text 491 612 KATE;
 #X text 877 617 DIANA;
 #X text 1079 615 SARAI;
-#X text 812 657 IP address: in CONTROL ALL panel \, bang "get_ip and
+#X text 646 647 IP address: in CONTROL ALL panel \, bang "get_ip and
 you will see the connected device id and ip in PD window (command R)
 you can paste this ip address in browser to to view individual bela
 status.;
 #X text 298 612 KIRSTY;
 #X text 677 614 ANGELA;
 #X text 82 611 DIMITRI;
-#X connect 10 0 3 0;
+#X text 510 640 sensor;
+#X text 510 661 1:shoulder R;
+#X text 510 678 2:knee R;
+#X text 510 696 3:foot R;
+#X text 510 713 4:elbow R;
+#X text 511 729 5:elbow L;
+#X text 510 748 6:foot L;
+#X text 510 766 7:knee L;
+#X text 512 785 8:sholder L;
+#X text 647 730 grab presets: bang "grab preset" to get value here
+;
+#X text 342 791 value is stored inside;
+#X obj 1038 717 r to_ctrl_netsend;
+#X obj 1031 744 print;
+#X connect 9 0 3 0;
+#X connect 39 0 40 0;

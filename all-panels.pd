@@ -9,7 +9,7 @@
 #X obj 664 323 list prepend mode;
 #X obj 163 219 bng 15 250 50 0 empty empty set_base 17 7 0 10 -262144
 -1 -1;
-#X obj 110 219 tgl 15 0 empty empty calib 17 7 0 10 -262144 -1 -1 0
+#X obj 109 220 tgl 15 0 empty empty calib 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 283 616 list trim;
 #X obj 436 615 list trim;
@@ -67,7 +67,7 @@
 #X obj 395 157 change;
 #X obj 396 181 t b b;
 #X obj 236 219 hsl 30 15 0 1 0 0 empty empty volume -2 -8 0 10 -257985
--1 -1 0 1;
+-1 -1 2900 1;
 #X obj 302 335 loadbang;
 #X msg 302 358 set 1;
 #X msg 352 206 set 0;
@@ -89,6 +89,12 @@
 #X obj 110 200 bng 15 250 50 0 empty empty get_ip 17 7 0 10 -262144
 -1 -1;
 #X obj 856 789 s all_control_val;
+#X obj 618 615 list trim;
+#X obj 618 567 list prepend sensor;
+#X obj 618 542 list prepend random;
+#X obj 197 192 tgl 15 0 empty empty random 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 618 589 list prepend all;
 #X connect 0 0 3 0;
 #X connect 1 0 73 0;
 #X connect 1 0 76 0;
@@ -163,6 +169,7 @@
 #X connect 57 0 58 0;
 #X connect 58 0 56 0;
 #X connect 59 0 8 0;
+#X connect 59 0 80 0;
 #X connect 60 0 36 0;
 #X connect 61 0 27 0;
 #X connect 62 0 24 0;
@@ -178,4 +185,10 @@
 #X connect 72 0 16 0;
 #X connect 72 0 15 0;
 #X connect 75 0 74 0;
+#X connect 77 0 73 0;
+#X connect 77 0 76 0;
+#X connect 78 0 81 0;
+#X connect 79 0 78 0;
+#X connect 80 0 79 0;
+#X connect 81 0 77 0;
 #X coords 0 -1 1 1 180 140 2 100 100;
