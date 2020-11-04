@@ -1,4 +1,4 @@
-#N canvas 156 23 1251 855 12;
+#N canvas 123 23 1251 855 12;
 #X declare -path bela/_common;
 #X obj 17 14 p_panels p1;
 #X obj 215 15 p_panels p2;
@@ -58,9 +58,9 @@
 #X connect 25 0 24 0;
 #X connect 27 0 24 0;
 #X connect 28 0 24 0;
-#X restore 790 783 pd network_related;
-#X msg 650 754 1 0.924159 0.98339 1 1 0.265474 0.525548 0.097471;
-#X obj 932 783 declare -path bela/_common;
+#X restore 882 789 pd network_related;
+#X msg 742 760 1 0.924159 0.98339 1 1 0.265474 0.525548 0.097471;
+#X obj 1024 789 declare -path bela/_common;
 #X obj 409 16 p_panels p3;
 #X obj 606 17 p_panels p4;
 #X obj 801 18 p_panels p5;
@@ -73,15 +73,15 @@
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
-#X restore 648 780 pd grabPresets;
-#X obj 37 663 all-panels;
-#X text 37 644 CONTROL ALL;
-#X text 236 664 mode;
-#X text 235 683 0: sensor-synth;
-#X text 234 700 1: acc-synth;
-#X text 234 718 2: voder;
-#X text 234 736 3: phoneme;
-#X text 233 755 4: granular;
+#X restore 740 786 pd grabPresets;
+#X obj 21 663 all-panels;
+#X text 21 644 CONTROL ALL;
+#X text 208 661 mode;
+#X text 207 680 0: sensor-synth;
+#X text 206 697 1: acc-synth;
+#X text 206 715 2: voder;
+#X text 206 733 3: phoneme;
+#X text 205 752 4: granular;
 #N canvas 0 23 880 295 voder_presets 0;
 #X text 450 240 voder;
 #X obj 299 235 s presets;
@@ -97,7 +97,7 @@
 1;
 #X msg 299 211 0 0 0 0 0 0 0 0.01;
 #X obj 107 121 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
--1 -1 3;
+-1 -1 1;
 #X obj 302 21 sel 0 1 2 3 4 5 6;
 #X text 107 100 Voder Preset;
 #X connect 2 0 1 0;
@@ -116,7 +116,7 @@
 #X connect 10 5 3 0;
 #X connect 10 6 4 0;
 #X coords 0 -1 1 1 120 40 2 100 100;
-#X restore 364 643 pd voder_presets;
+#X restore 508 662 pd voder_presets;
 #N canvas 0 23 450 300 phoneme_presets 0;
 #X obj 205 197 s presets;
 #X text 290 199 phoneme;
@@ -138,66 +138,102 @@
 #X connect 7 2 3 0;
 #X connect 7 3 4 0;
 #X coords 0 -1 1 1 120 40 2 100 100;
-#X restore 364 694 pd phoneme_presets;
-#N canvas 0 23 1371 545 granular_presets 0;
+#X restore 508 713 pd phoneme_presets;
+#N canvas 0 23 1371 545 granular_presets 1;
 #X text 412 223 granular;
-#X msg 149 199 0 0 0 0 0 0 0 0.1;
 #X obj 333 219 s presets;
 #X obj 107 121 hradio 15 1 0 7 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 149 172 sel 0 1 2 3 4 5 6;
 #X text 105 100 Granular Preset;
-#X msg 350 87 0.576471 0 0.15748 0.976378 1 0 0 0;
-#X msg 351 161 0.823529 0 0.834646 0.976378 1 0 0 0;
-#X msg 352 136 0.492157 0 0.0314961 0.653543 1 0 0 0;
-#X msg 349 35 0.027451 0 0.228346 0.677165 1 0 0 0;
-#X msg 349 60 0.964706 0 0.15748 0.976378 1 0 0 0;
-#X msg 353 112 0.231373 0 0.00787402 0.496063 1 0 0 0;
 #X msg 765 368 0.964706 0.0393701 0.15748 0.976378 1 0 0 0;
 #X msg 765 394 0.576471 0 0.15748 0.976378 1 0 0 0;
 #X msg 765 420 0.231373 0.0393701 0.00787402 0.496063 1 0 0 0;
 #X msg 765 342 0.027451 0.23622 0.228346 0.677165 1 0 0 0;
 #X msg 765 446 0.992157 0 0.0314961 0.653543 1 0 0 0;
 #X msg 765 472 0.823529 0 0.834646 0.976378 1 0 0 0;
-#X connect 1 0 2 0;
-#X connect 3 0 4 0;
-#X connect 4 0 1 0;
-#X connect 4 1 9 0;
-#X connect 4 2 10 0;
-#X connect 4 3 6 0;
-#X connect 4 4 11 0;
-#X connect 4 5 8 0;
-#X connect 4 6 7 0;
-#X connect 6 0 2 0;
-#X connect 7 0 2 0;
-#X connect 8 0 2 0;
-#X connect 9 0 2 0;
-#X connect 10 0 2 0;
-#X connect 11 0 2 0;
+#X msg 349 35 0.027451 0.001 0.228346 0.677165 1 0.0001 0.001 0.001
+;
+#X msg 349 60 0.964706 0.0001 0.15748 0.976378 1 0.001 0.0001 1e-05
+;
+#X msg 350 87 0.576471 0.001 0.15748 0.976378 1 0.001 0.0001 0.0001
+;
+#X msg 352 136 0.492157 0.001 0.0314961 0.653543 1 0.001 0.001 0.001
+;
+#X msg 353 113 0.231373 0.0001 0.00787402 0.496063 1 0.0001 0.0001
+0.0001;
+#X msg 351 161 0.823529 0.0001 0.834646 0.976378 1 0.001 0.0001 0.001
+;
+#X msg 149 199 0.001 0.0001 0.001 0.001 0.001 0.0001 0.0001 0.01;
+#X connect 2 0 3 0;
+#X connect 3 0 17 0;
+#X connect 3 1 11 0;
+#X connect 3 2 12 0;
+#X connect 3 3 13 0;
+#X connect 3 4 15 0;
+#X connect 3 5 14 0;
+#X connect 3 6 16 0;
+#X connect 11 0 1 0;
+#X connect 12 0 1 0;
+#X connect 13 0 1 0;
+#X connect 14 0 1 0;
+#X connect 15 0 1 0;
+#X connect 16 0 1 0;
+#X connect 17 0 1 0;
 #X coords 0 -1 1 1 120 40 2 100 100;
-#X restore 364 745 pd granular_presets;
+#X restore 508 764 pd granular_presets;
 #X text 491 612 KATE;
 #X text 877 617 DIANA;
 #X text 1079 615 SARAI;
-#X text 647 648 IP address: in CONTROL ALL panel \, bang "get_ip and
+#X text 775 653 IP address: in CONTROL ALL panel \, bang "get_ip and
 you will see the connected device id and ip in PD window (command R)
 you can paste this ip address in browser to to view individual bela
 status.;
 #X text 298 612 KIRSTY;
 #X text 677 614 ANGELA;
 #X text 82 611 DIMITRI;
-#X text 510 640 sensor;
-#X text 510 661 1:shoulder R;
-#X text 510 678 2:knee R;
-#X text 510 696 3:foot R;
-#X text 510 713 4:elbow R;
-#X text 511 729 5:elbow L;
-#X text 510 748 6:foot L;
-#X text 510 766 7:knee L;
-#X text 512 785 8:sholder L;
-#X text 647 730 grab presets: bang "grab preset" to get value here
+#X text 643 651 sensor;
+#X text 643 672 1:shoulder R;
+#X text 643 689 2:knee R;
+#X text 643 707 3:foot R;
+#X text 643 724 4:elbow R;
+#X text 644 740 5:elbow L;
+#X text 643 759 6:foot L;
+#X text 643 777 7:knee L;
+#X text 644 795 8:sholder L;
+#X text 739 736 grab presets: bang "grab preset" to get value here
 ;
-#X text 342 791 value is stored inside;
-#X obj 1164 648 zmq;
-#X obj 1157 673 gate;
+#X text 446 810 value is stored inside;
+#X obj 1180 736 zmq;
+#X obj 1173 761 gate;
+#N canvas 0 23 1075 718 presetView 0;
+#X obj 106 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 128 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 149 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 172 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 194 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 215 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 236 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 258 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1270 1;
+#X obj 120 61 unpack 0 0 0 0 0 0 0 0;
+#X obj 115 31 r presets;
+#X connect 8 0 0 0;
+#X connect 8 1 1 0;
+#X connect 8 2 2 0;
+#X connect 8 3 3 0;
+#X connect 8 4 4 0;
+#X connect 8 5 5 0;
+#X connect 8 6 6 0;
+#X connect 8 7 7 0;
+#X connect 9 0 8 0;
+#X coords 0 -1 1 1 180 140 2 100 100;
+#X restore 322 662 pd presetView;
 #X connect 9 0 3 0;
