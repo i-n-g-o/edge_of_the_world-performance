@@ -30,9 +30,9 @@
 -228856 -1 -1 1 256;
 #X text 665 227 <= input;
 #X obj 531 20 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 10600 1;
+-1 -1 0 1;
 #X obj 794 20 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 12400 1;
+-1 -1 12700 1;
 #X obj 1189 688 loadbang;
 #X obj 36 196 t b f;
 #X obj 262 681 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
@@ -42,7 +42,7 @@
 #X obj 416 -161 inlet;
 #X obj 416 -115 unpack 0 0 0 0 0 0 0 0;
 #X obj 41 73 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -203904
--1 -1 10459 1;
+-1 -1 2597 1;
 #X obj 338 930 dac~;
 #X obj 50 929 throw~ outL;
 #X obj 175 929 throw~ outR;
@@ -58,9 +58,9 @@ laptop);
 #N canvas 883 182 450 300 grainDur 0;
 #X floatatom 44 155 10 0 0 0 - - -;
 #X obj 45 106 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 235.748 256;
+-228856 -1 -1 240 256;
 #X obj 45 47 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0.976378 256;
+-228856 -1 -1 1 256;
 #X text 105 46 <= input;
 #X text 107 104 <= scaled value;
 #X obj 68 126 loadmess 70;
@@ -101,9 +101,9 @@ laptop);
 #X obj 90 264 metro 125;
 #X floatatom 171 178 5 0 0 0 - - -;
 #X obj 152 113 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 251.221 256;
+-228856 -1 -1 5 256;
 #X obj 152 62 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 0.834646 256;
+-228856 -1 -1 0 256;
 #X text 213 61 <= input;
 #X text 217 110 <= scaled value;
 #X obj 90 212 loadbang;
@@ -157,7 +157,7 @@ laptop);
 #X obj 1152 270 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 1181 332 pack 0 0 0 0 0 0 0 0;
-#N canvas 683 23 597 755 presetList 0;
+#N canvas 683 23 597 755 presetList 1;
 #X obj 37 40 inlet;
 #X obj 17 487 outlet;
 #X obj 14 116 sel 1;
@@ -170,19 +170,19 @@ laptop);
 #X msg 58 228 0.576471 0 0.15748 0.976378 1 0 0 0;
 #X msg 146 346 0.823529 0 0.834646 0.976378 1 0 0 0;
 #X msg 107 305 0.492157 0 0.0314961 0.653543 1 0 0 0;
-#X msg 17 151 0.027451 0 0.228346 0.677165 1 0 0 0;
 #X msg 33 190 0.964706 0 0.15748 0.976378 1 0 0 0;
 #X msg 73 269 0.231373 0 0.00787402 0.496063 1 0 0 0;
+#X msg 17 151 0.20451 0 0 1 1 0 0 0;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 0 0 6 0;
 #X connect 0 0 8 0;
-#X connect 2 0 12 0;
-#X connect 3 0 13 0;
+#X connect 2 0 14 0;
+#X connect 3 0 12 0;
 #X connect 4 0 9 0;
-#X connect 5 0 14 0;
+#X connect 5 0 13 0;
 #X connect 6 0 11 0;
 #X connect 7 0 1 0;
 #X connect 8 0 10 0;
