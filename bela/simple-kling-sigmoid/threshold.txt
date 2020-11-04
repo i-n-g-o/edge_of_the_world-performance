@@ -1,0 +1,16 @@
+sensor8 max 0.9
+sensor8 min 0.1
+sensor7 max 0.9
+sensor7 min 0.1
+sensor6 max 0.9
+sensor6 min 0.1
+sensor5 max 0.9
+sensor5 min 0.1
+sensor4 max 0.9
+sensor4 min 0.1
+sensor3 max 0.9
+sensor3 min 0.1
+sensor2 max 0.9
+sensor2 min 0.1
+sensor1 max 0.9
+sensor1 min 0.1
