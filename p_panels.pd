@@ -1,25 +1,25 @@
 #N canvas 69 48 1323 830 12;
 #X obj 111 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8640 1;
+-1 -1 0 1;
 #X obj 133 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2538 1;
+-1 -1 0 1;
 #X obj 154 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 176 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5875 1;
+-1 -1 0 1;
 #X obj 198 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 3289 1;
+-1 -1 0 1;
 #X obj 220 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 242 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 2572 1;
+-1 -1 0 1;
 #X obj 263 122 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 5694 1;
+-1 -1 0 1;
 #X text 234 102 SENSOR;
 #X obj 110 272 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 131 272 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 10070 1;
+-1 -1 0 1;
 #X obj 152 272 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 176 272 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -76,11 +76,11 @@
 #X obj 611 750 list prepend sensor;
 #X obj 764 725 list prepend calibration;
 #X obj 764 750 list prepend sensor;
-#X obj 208 566 tgl 15 0 empty empty train_mode 17 7 0 10 -258858 -1
+#X obj 194 567 tgl 15 0 empty empty train_mode 17 7 0 10 -258858 -1
 -1 0 1;
 #X obj 109 588 tgl 15 0 empty empty add_data 22 7 0 10 -4032 -1 -1
 0 1;
-#X obj 195 611 bng 15 250 50 0 empty empty ml_train 17 7 0 10 -4160
+#X obj 194 609 bng 15 250 50 0 empty empty ml_train 17 7 0 10 -4160
 -262144 -1;
 #X obj 195 590 bng 15 250 50 0 empty empty ml_write 17 7 0 10 -163136
 -1 -1;
@@ -113,7 +113,7 @@
 #X obj 1129 523 list prepend ml;
 #X obj 1129 498 list prepend clear;
 #X obj 19 630 vsl 15 30 0 1 0 0 empty empty volume 0 -9 0 10 -262144
--1 -1 2900 1;
+-1 -1 0 1;
 #X obj 398 729 * 10;
 #X obj 399 755 int;
 #X obj 398 781 / 10;
@@ -185,7 +185,7 @@
 #X msg 376 190 set 0;
 #X msg 405 238 set 0;
 #X obj 231 665 hsl 30 15 0 1 0 0 empty empty volume -2 -8 0 10 -262130
--1 -1 2900 1;
+-1 -1 0 1;
 #X obj 319 638 loadbang;
 #X msg 319 661 set 1;
 #X msg 369 509 set 0;
@@ -228,6 +228,8 @@
 #X obj 195 633 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 1042 334 sel 0 1 2;
+#X obj 1150 720 sel 0;
+#X msg 1150 743 1;
 #X connect 17 0 9 0;
 #X connect 17 1 10 0;
 #X connect 17 2 11 0;
@@ -280,6 +282,7 @@
 #X connect 50 0 110 0;
 #X connect 50 0 119 0;
 #X connect 50 0 132 0;
+#X connect 50 0 182 0;
 #X connect 51 0 63 0;
 #X connect 52 0 168 0;
 #X connect 53 0 67 0;
@@ -445,4 +448,6 @@
 #X connect 181 0 177 0;
 #X connect 181 1 178 0;
 #X connect 181 2 179 0;
+#X connect 182 0 183 0;
+#X connect 183 0 142 0;
 #X coords 0 -1 1 1 190 590 1 100 100;

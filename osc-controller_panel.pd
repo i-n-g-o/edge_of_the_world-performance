@@ -211,15 +211,15 @@ status.;
 #X obj 1173 761 gate;
 #N canvas 0 23 1075 718 presetView 0;
 #X obj 106 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 6250 1;
+-1 -1 0 1;
 #X obj 128 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 149 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 400 1;
+-1 -1 0 1;
 #X obj 172 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 8300 1;
+-1 -1 0 1;
 #X obj 194 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 215 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 236 108 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
